@@ -114,7 +114,7 @@ async function sendInitialPrompt() {
         ];
         
         const payload = {
-            model: "deepseek/deepseek-chat-v3-0324:free",
+            model: "google/gemma-3-4b-it",
             messages: messages,
             temperature: 0.7,
             max_tokens: 256
@@ -263,7 +263,7 @@ async function sendMessage() {
         const url = "https://openrouter.ai/api/v1/chat/completions";
         
         const payload = {
-            model: "deepseek/deepseek-chat-v3-0324:free",
+            model: "google/gemma-3-4b-it",
             messages: conversationHistory,
             temperature: 0.7,
             max_tokens: 256
@@ -386,7 +386,7 @@ async function giveUp() {
         const url = "https://openrouter.ai/api/v1/chat/completions";
         
         const payload = {
-            model: "deepseek/deepseek-chat-v3-0324:free",
+            model: "google/gemma-3-4b-it",
             messages: conversationHistory,
             temperature: 0.7,
             max_tokens: 256
