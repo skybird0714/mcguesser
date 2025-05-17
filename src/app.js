@@ -263,7 +263,7 @@ async function sendMessage() {
         const url = "https://openrouter.ai/api/v1/chat/completions";
         
         const payload = {
-            model: "qwen/qwen3-14b",
+            model: "deepseek/deepseek-chat-v3-0324:free",
             messages: conversationHistory,
             temperature: 0.7,
             max_tokens: 256
