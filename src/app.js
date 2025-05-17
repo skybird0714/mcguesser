@@ -106,7 +106,7 @@ async function sendInitialPrompt() {
         ];
         
         const payload = {
-            model: "qwen/qwen3-14b",
+            model: "qwen/qwen3-8b",
             messages: messages,
             temperature: 0.7,
             max_tokens: 256
@@ -306,7 +306,7 @@ async function sendMessage() {
             displayAIMessage(finalMessage);
             
             // 检查游戏是否结束
-            if (finalMessage.includes("猜测正确") || currentRound >= 15) {
+            if (finalMessage.includes("正确") || currentRound >= 15) {
                 endGame();
             } else {
                 // 启用输入
