@@ -114,7 +114,7 @@ async function sendInitialPrompt() {
         ];
         
         const payload = {
-            model: "google/gemma-3-4b-it",
+            model: "mistralai/mistral-nemo",
             messages: messages,
             temperature: 0.7,
             max_tokens: 256
@@ -263,7 +263,7 @@ async function sendMessage() {
         const url = "https://openrouter.ai/api/v1/chat/completions";
         
         const payload = {
-            model: "google/gemma-3-4b-it",
+            model: "mistralai/mistral-nemo",
             messages: conversationHistory,
             temperature: 0.7,
             max_tokens: 256
@@ -386,7 +386,7 @@ async function giveUp() {
         const url = "https://openrouter.ai/api/v1/chat/completions";
         
         const payload = {
-            model: "google/gemma-3-4b-it",
+            model: "mistralai/mistral-nemo",
             messages: conversationHistory,
             temperature: 0.7,
             max_tokens: 256
