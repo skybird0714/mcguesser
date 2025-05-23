@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCguesser - 猜测Minecraft物品</title>
+    <link rel="icon" href="src/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header glass">
+            <div class="logo">MCguesser</div>
+            <nav class="nav-links">
+                <a href="https://game.071400.xyz/" class="nav-link">大厅</a>
+                <a href="https://space.bilibili.com/515626972/" class="nav-link">B站</a>
+                <a href="https://start.071400.xyz/" class="nav-link">起始页</a>
+                <a href="https://home.071400.xyz/" class="nav-link">主页</a>
+                <a href="https://071400.xyz/" class="nav-link">博客</a>
+                <a href="https://071400.xyz/2025/05/mcguesser/" class="nav-link">使用说明</a>
+            </nav>
+        </header>
+        
+        <main class="chat-container glass">
+            <div class="chat-messages" id="chatMessages"></div>
+            
+            <div class="game-info">
+                <div class="round-info">回合: <span id="roundCount">0</span>/20</div>
+                <div class="token-info">Tokens: <span id="tokenCount">0</span></div>
+            </div>
+            
+            <div class="chat-controls">
+                <button id="giveUpBtn" class="give-up-btn">放弃</button>
+                <div class="input-container">
+                    <input type="text" id="userInput" placeholder="输入你的猜测或问题..." disabled>
+                    <button id="sendBtn" disabled>发送</button>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="startBtn" class="start-btn">开始游戏</button>
+                <button id="restartBtn" class="restart-btn" style="display: none;">再来一局</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- 确认对话框 -->
+    <div class="overlay" id="overlay"></div>
+    <div class="confirm-dialog" id="confirmDialog">
+        <div class="confirm-title">确定要放弃当前游戏吗？</div>
+        <div class="confirm-buttons">
+            <button class="confirm-btn confirm-no" id="confirmNo">取消</button>
+            <button class="confirm-btn confirm-yes" id="confirmYes">确定</button>
+        </div>
+    </div>
+
+    <script src="src/app.js"></script>
+</body>
+</html>
